@@ -22,6 +22,8 @@ $aurora-green:  #A3BE8C;
 $aurora-purple: #B48EAD;
 
 
+$content-width: 1000px;
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $polarnight-2;
@@ -29,24 +31,44 @@ body {
   margin: 0;
 }
 
-.header {
-  background-color: $snowstorm-3;
-  color: $polarnight-1;
+#container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  min-height: 50px;
+}
+
+.header {
+  border-bottom: 3px solid $polarnight-3;
+  display: flex;
+  justify-content: center;
+  min-height: 40px;
+  align-self: stretch;
+  padding: 5px 0;
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $content-width + 70px;
+  }
 
   .header__logo {
     display: flex;
-    margin: 0 20px;
-    font-weight: 500;
-    font-size: 1.2em;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 0.10em;
+
+    img {
+      max-height: 50px;
+      margin: 6px 0;
+    }
   }
 
   .header__nav {
     display: flex;
-    margin: 0 20px;
 
     .header__nav__btn {
       display: none;
@@ -54,10 +76,113 @@ body {
 
     a {
       text-decoration: none;
-      color: $polarnight-1;
+      color: $snowstorm-3;
       font-weight: 500;
       font-size: 1.2em;
       margin: 0 6px;
     }
+
+    .header__nav--active {
+      color: $frost-2;
+    }
+  }
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.section__content {
+  width: 100%;
+  max-width: $content-width;
+}
+
+.hero {
+  width: 100%;
+  font-size: 1.2em;
+  padding: 60px 0;
+
+  .section__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    h1 {
+      margin: 5px 0;
+    }
+
+    .hero__text {
+      max-width: 600px;
+    }
+
+    .hero__buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .hero__btn {
+      font-size: 0.9em;
+      border: 0;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-weight: 500;
+      color: $polarnight-1;
+      background-color: $frost-2;
+    }
+
+    .hero__btn--install {
+      color: $snowstorm-3;
+      border: 2px solid $snowstorm-3;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .hero__image img {
+      width: 400px;
+    }
+  }
+}
+
+.features {
+  background-color: $polarnight-1;
+  color: $snowstorm-1;
+  padding: 30px 0;
+  align-items: center;
+
+  .features__header {
+    align-self: flex-start;
+    margin-bottom: 20px;
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    div {
+      color: $frost-2;
+      margin: 0 0;
+      font-weight: 500;
+    }
+  }
+
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features__cards {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .feature {
+    max-width: 300px;
   }
 }
