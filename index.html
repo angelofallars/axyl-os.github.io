@@ -46,8 +46,8 @@
 
             <div class="header__nav__links">
               <a href="#" class="header__nav--active">Home</a>
-              <a href="#">Download</a>
-              <a href="#">Documentation</a>
+              <a href="https://github.com/axyl-os/axyl-iso/releases">Download</a>
+              <a href="https://github.com/axyl-os/axyl-iso">GitHub</a>
             </div>
           </div>
         </div>
@@ -59,18 +59,18 @@
             <h1>Power in Simplicity</h1>
 
             <p>
-            Axyl is an Arch Linux-based operating system designed to be simple yet powerful.
-            Turbocharge your productivity with i3, BSPWM and dwm.
+            Axyl is a window manager-centric operating system.
+            Turbocharge your productivity with i3, bspwm and dwm and more.
             </p>
 
             <div class="hero__buttons">
-              <button class="hero__btn hero__btn--download">
+              <a class="hero__btn hero__btn--download" href="https://github.com/axyl-os/axyl-iso/releases">
                 Download
-              </button>
+              </a>
 
-              <button class="hero__btn hero__btn--install">
+              <a class="hero__btn hero__btn--install" href="https://github.com/axyl-os/axyl-iso#install">
                 How to Install
-              </button>
+              </a>
             </div>
           </div>
 
@@ -83,7 +83,7 @@
       <div class="features section">
         <div class="section__content">
           <div class="features__header">
-            <h2>Welcome to Axyl</h2>
+            <h2>What is Axyl?</h2>
             <div>Features</div>
           </div>
 
@@ -96,19 +96,20 @@
                 Arch-Based
               </h3>
               <div class="feature__body">
-                Enjoy the greatest and latest features from Arch Linux's bleeding-edge release model.
+                Built on top of Arch Linux, this distro gives you the latest
+                cutting-edge software right away.
               </div>
             </div>
 
             <div class="feature">
               <div class="feature__icon">
-                <i class="fas fa-code"></i>
+                <i class="fas fa-check-square"></i>
               </div>
               <h3 class="feature__header">
-                Coding
+                Minimal Base
               </h3>
               <div class="feature__body">
-                Axyl comes with NVChad so you can get to coding right away.
+                Axyl follows the KISS principles, keeping the base system simple yet flexible.
               </div>
             </div>
 
@@ -117,25 +118,41 @@
                 <i class="far fa-window-restore"></i>
               </div>
               <h3 class="feature__header">
-                Window managers
+                Window Manager-Centric
               </h3>
               <div class="feature__body">
-                The Axyl WMs all come with the same set of default bindings.
+                Axyl focuses completely on tiling WMs, so we can provide you
+                with the best workflow for power users.
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="big-preview section">
+        <div class="section__content">
+          <h2>Turbocharge your destiny</h2>
+          <img src="./assets/img/axyl-qtile.gif" alt="Qtile gif">
+          <p>Qtile Desktop</p>
+        </div>
+      </div>
+
       <div class="wm section">
         <div class="section__content">
-          <h2>Window Managers</h2>
+          <div class="wm__title">
+            <h2>Window Managers</h2>
+            <div>
+              In Axyl, all window managers come with the same set of global
+              keybindings, so switching is easy. Install just one,
+              or install as many as you want.
+            </div>
+          </div>
 
           <div class="wm__cards">
 
             <div class="wm__entry">
               <div class="wm__image">
-                <img src="assets/img/window-managers/i3.svg" alt="i3 window manager">
+                <img src="assets/img/window-managers/i3.svg" alt="i3">
               </div>
 
               <div class="wm__text">
@@ -143,40 +160,43 @@
                   i3
                 </h3>
                 <div class="wm__text__body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </div>
-              </div>
-            </div>
-
-            <div class="wm__entry wm__entry--reverse">
-              <div class="wm__image">
-                <img src="assets/img/window-managers/bspwm.svg" alt="BSPWM window manager">
-              </div>
-              <div class="wm__text">
-                <h3 class="wm__text__title">
-                  BSPWM
-                </h3>
-                <div class="wm__text__body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                  A simple and classic window manager, inspiring countless
+                  of other window managers.
                 </div>
               </div>
             </div>
 
             <div class="wm__entry">
               <div class="wm__image">
-                <img src="assets/img/window-managers/dwm.svg" alt="WM image">
+                <img src="assets/img/window-managers/bspwm.svg" alt="bspwm">
+              </div>
+              <div class="wm__text">
+                <h3 class="wm__text__title">
+                  bspwm
+                </h3>
+                <div class="wm__text__body">
+                  A tiling window manager that represents a full binary tree.
+                </div>
+              </div>
+            </div>
+
+            <div class="wm__entry">
+              <div class="wm__image">
+                <img src="assets/img/window-managers/dwm.svg" alt="dwm">
               </div>
               <div class="wm__text">
                 <h3 class="wm__text__title">
                   dwm
                 </h3>
                 <div class="wm__text__body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                  The dynamic window manager by suckless.
+                  Axyl uses <a href="https://github.com/siduck/chadwm">chadwm</a>
+                  from siduck, the creator of NvChad.
                 </div>
               </div>
             </div>
 
-            <div class="wm__entry wm__entry--reverse">
+            <div class="wm__entry">
               <div class="wm__image">
                 <i class="fa fa-power-off"></i>
               </div>
@@ -185,7 +205,7 @@
                   Qtile
                 </h3>
                 <div class="wm__text__body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                  Hackable tiling window manager written in Python.
                 </div>
               </div>
             </div>
@@ -194,8 +214,10 @@
         </div>
       </div>
 
-      <div class="footer">
-        Copyright 2021
+      <div class="footer section">
+        <div class="section__content">
+          © 2021 The Axyl Team. Made by <a href="https://github.com/Kungger-git">Gabriel Matthews</a>.
+        </div>
       </div>
     </div>
   </body>

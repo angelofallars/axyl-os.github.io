@@ -31,6 +31,16 @@ body {
   margin: 0;
 }
 
+a {
+  color: $frost-2;
+  text-decoration: none;
+}
+
+h2 {
+  margin: 5px 0;
+  font-size: 1.9em;
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -80,9 +90,15 @@ body {
       font-weight: 500;
       font-size: 1.2em;
       margin: 0 6px;
+      transition: all 0.2s ease-out;
     }
 
-    .header__nav--active {
+    a:hover {
+      color: $frost-2;
+    }
+
+
+    a.header__nav--active {
       color: $frost-2;
     }
   }
@@ -131,14 +147,26 @@ body {
       border-radius: 4px;
       padding: 8px 12px;
       font-weight: 500;
+      text-decoration: none;
       color: $polarnight-1;
       background-color: $frost-2;
+      transition: all 0.2s ease-out;
+    }
+
+    .hero__btn--download:hover {
+      color: $polarnight-2;
+      background-color: $snowstorm-1;
     }
 
     .hero__btn--install {
       color: $snowstorm-3;
       border: 2px solid $snowstorm-3;
       background-color: rgba(0, 0, 0, 0);
+    }
+
+    .hero__btn--install:hover {
+      color: $polarnight-2;
+      background-color: $snowstorm-1;
     }
 
     .hero__image img {
@@ -149,8 +177,7 @@ body {
 
 .features {
   background-color: $polarnight-1;
-  color: $snowstorm-1;
-  padding: 30px 0;
+  padding: 50px 0;
   align-items: center;
 
   .section__content {
@@ -163,11 +190,6 @@ body {
     margin-bottom: 36px;
     text-align: center;
 
-    h2 {
-      margin: 5px 0;
-      font-size: 1.9em;
-    }
-
     div {
       color: $frost-1;
       margin: 0 0;
@@ -177,7 +199,7 @@ body {
 
   .features__cards {
     width: 100%;
-    max-width: $content-width - 50px;
+    max-width: $content-width;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -185,7 +207,7 @@ body {
   }
 
   .feature {
-    max-width: 250px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,8 +230,8 @@ body {
   }
 }
 
-.wm {
-  align-items: center;
+.big-preview {
+  padding: 30px 0;
 
   .section__content {
     display: flex;
@@ -217,8 +239,46 @@ body {
     align-items: center;
   }
 
+  h2 {
+    margin: 20px 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: $content-width - 300px;
+  }
+
+  p {
+    text-align: left;
+    align-self: center;
+    width: 100%;
+    max-width: $content-width - 300px;
+    margin: 5px 0;
+    font-weight: 500;
+  }
+}
+
+.wm {
+  align-items: center;
+
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  h2 {
+    margin: 6px 0;
+  }
+
+  .wm__title {
+    text-align: center;
+    max-width: 600px;
+  }
+
   .wm__image {
-    $wm__image-width: 200px;
+    $wm__image-width: 150px;
 
     img {
       width: $wm__image-width;
@@ -231,29 +291,35 @@ body {
 
   .wm__cards {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: center;
   }
 
   h3 {
     margin: 9px 0;
-    font-size: 1.3em;
+    font-size: 1.6em;
+    color: $frost-2;
   }
 
   .wm__entry {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     min-height: 150px;
-  }
-    
-  .wm__entry--reverse {
-    flex-direction: row-reverse;
+    margin: 20px 10px;
   }
 
   .wm__text {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 300px;
   }
+}
 
+.footer {
+  background-color: $polarnight-1;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
