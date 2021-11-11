@@ -24,6 +24,10 @@ $aurora-purple: #B48EAD;
 
 $content-width: 1050px;
 
+html {
+  margin: 0;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $polarnight-2;
@@ -55,14 +59,6 @@ h2 {
   align-self: stretch;
   padding: 5px 0;
 
-  .header__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: $content-width + 70px;
-  }
-
   .header__logo {
     display: flex;
     align-items: center;
@@ -75,6 +71,14 @@ h2 {
       max-height: 50px;
       margin: 6px 0;
     }
+  }
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: $content-width + 70px;
   }
 
   .header__nav {
@@ -113,7 +117,7 @@ h2 {
 }
 
 .section__content {
-  width: 100%;
+  width: 90%;
   max-width: $content-width;
 }
 
@@ -125,6 +129,7 @@ h2 {
   .section__content {
     display: flex;
     align-items: center;
+    flex-flow: row wrap;
     justify-content: space-between;
     gap: 10px;
 
@@ -170,7 +175,9 @@ h2 {
     }
 
     .hero__image img {
-      width: 400px;
+      width: 100%;
+      max-width: 400px;
+      margin: 10px 0;
     }
   }
 }
@@ -265,16 +272,17 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
+    margin: 15px 0;
   }
 
   h2 {
     margin: 6px 0;
   }
 
-  .wm__title {
+  .wm__header {
     text-align: center;
     max-width: 600px;
+    margin: 20px 0;
   }
 
   .wm__image {
@@ -307,7 +315,7 @@ h2 {
     align-items: center;
     gap: 20px;
     min-height: 150px;
-    margin: 20px 10px;
+    margin: 25px 15px;
   }
 
   .wm__text {
@@ -318,6 +326,12 @@ h2 {
     height: 100%;
     justify-content: center;
   }
+
+  .wm__text__title--gray {
+    color: $frost-4;
+    margin-left: 2px;
+    font-size: 80%;
+  }
 }
 
 @mixin wm-colorscheme($bg, $fg, $red, $green, $blue) {
@@ -327,15 +341,17 @@ h2 {
   align-self: flex-start;
   padding: 4px 8px;
   border-radius: 5px;
-  min-width: 200px;
+  min-width: 165px;
+
+  user-select: none;
 
   .wm__theme__circles {
-    margin-right: 10px;
-    margin-left: 3px;
+    margin-right: 11px;
+    margin-left: 4px;
   }
 
   i {
-    margin: 0 -3px;
+    margin: 0 -4px;
   }
 
   background-color: $bg;
@@ -378,6 +394,14 @@ h2 {
                           $blue:  #61AFEF);
 }
 
+.wm__theme.nord {
+  @include wm-colorscheme($bg:    #2E3440,
+                          $fg:    #D8DEE9,
+                          $red:   #BF616A,
+                          $green: #A3BE8C,
+                          $blue:  #81A1C1);
+}
+
 .wm__theme.tomorrow {
   @include wm-colorscheme($bg:    #1d1f21,
                           $fg:    #c5c8c6,
@@ -386,48 +410,54 @@ h2 {
                           $blue:  #81a2be);
 }
 
-/*
-.wm__theme {
-  margin-top: auto;
-  display: flex;
-  font-family: 'Roboto Mono', monospace;
-  align-self: flex-start;
-  padding: 4px 8px;
-  border-radius: 5px;
-
-  $dracula-bg: #282A36;
-  $dracula-fg: #f8f8f2;
-  $dracula-red:   #ff5555;
-  $dracula-green: #50fa7b;
-  $dracula-blue:  #bd93f9;
-
-  color: $dracula-fg;
-  background-color: $dracula-bg;
-
-  .circle--red {
-    color: $dracula-red;
-  }
-
-  .circle--green {
-    color: $dracula-green;
-  }
-
-  .circle--blue {
-    color: $dracula-blue;
-  }
-
-  .wm__theme__circles {
-    margin-right: 8px;
-  }
-
-  i {
-    margin: 0 -3px;
-  }
-}
-*/
-
 .footer {
   background-color: $polarnight-1;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media all and (max-width: 600px) {
+  .hero {
+    padding: 65px 0;
+
+    br {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    p {
+      margin: 15px 0;
+    }
+
+    .hero__buttons {
+      justify-content: flex-start;
+      margin: 25px 0;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  .wm {
+    .wm__entry {
+      margin: 25px 0;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 5px;
+
+      .wm__theme {
+        margin: 8px 0;
+        align-self: center;
+      }
+    }
+  }
+
+  .wm__theme {
+    min-width: 50px !important;
+  }
 }

@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Mono:wght@400&display=swap");
 /* Nord Theme */
+html {
+  margin: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #3B4252;
@@ -31,13 +35,6 @@ h2 {
   align-self: stretch;
   padding: 5px 0;
 }
-.header .header__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1120px;
-}
 .header .header__logo {
   display: flex;
   align-items: center;
@@ -49,6 +46,13 @@ h2 {
 .header .header__logo img {
   max-height: 50px;
   margin: 6px 0;
+}
+.header .header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1120px;
 }
 .header .header__nav {
   display: flex;
@@ -80,7 +84,7 @@ h2 {
 }
 
 .section__content {
-  width: 100%;
+  width: 90%;
   max-width: 1050px;
 }
 
@@ -92,6 +96,7 @@ h2 {
 .hero .section__content {
   display: flex;
   align-items: center;
+  flex-flow: row wrap;
   justify-content: space-between;
   gap: 10px;
 }
@@ -130,7 +135,9 @@ h2 {
   background-color: #D8DEE9;
 }
 .hero .section__content .hero__image img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
 }
 
 .features {
@@ -209,14 +216,15 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 .wm h2 {
   margin: 6px 0;
 }
-.wm .wm__title {
+.wm .wm__header {
   text-align: center;
   max-width: 600px;
+  margin: 20px 0;
 }
 .wm .wm__image img {
   width: 150px;
@@ -240,7 +248,7 @@ h2 {
   align-items: center;
   gap: 20px;
   min-height: 150px;
-  margin: 20px 10px;
+  margin: 25px 15px;
 }
 .wm .wm__text {
   display: flex;
@@ -250,6 +258,11 @@ h2 {
   height: 100%;
   justify-content: center;
 }
+.wm .wm__text__title--gray {
+  color: #5E81AC;
+  margin-left: 2px;
+  font-size: 80%;
+}
 
 .wm__theme.everforest {
   margin-top: auto;
@@ -258,16 +271,17 @@ h2 {
   align-self: flex-start;
   padding: 4px 8px;
   border-radius: 5px;
-  min-width: 200px;
+  min-width: 165px;
+  user-select: none;
   background-color: #2b3339;
   color: #d3c6aa;
 }
 .wm__theme.everforest .wm__theme__circles {
-  margin-right: 10px;
-  margin-left: 3px;
+  margin-right: 11px;
+  margin-left: 4px;
 }
 .wm__theme.everforest i {
-  margin: 0 -3px;
+  margin: 0 -4px;
 }
 .wm__theme.everforest .circle--red {
   color: #e67e80;
@@ -286,16 +300,17 @@ h2 {
   align-self: flex-start;
   padding: 4px 8px;
   border-radius: 5px;
-  min-width: 200px;
+  min-width: 165px;
+  user-select: none;
   background-color: #282A36;
   color: #f8f8f2;
 }
 .wm__theme.dracula .wm__theme__circles {
-  margin-right: 10px;
-  margin-left: 3px;
+  margin-right: 11px;
+  margin-left: 4px;
 }
 .wm__theme.dracula i {
-  margin: 0 -3px;
+  margin: 0 -4px;
 }
 .wm__theme.dracula .circle--red {
   color: #ff5555;
@@ -314,16 +329,17 @@ h2 {
   align-self: flex-start;
   padding: 4px 8px;
   border-radius: 5px;
-  min-width: 200px;
+  min-width: 165px;
+  user-select: none;
   background-color: #1E222A;
   color: #ABB2BF;
 }
 .wm__theme.onedark .wm__theme__circles {
-  margin-right: 10px;
-  margin-left: 3px;
+  margin-right: 11px;
+  margin-left: 4px;
 }
 .wm__theme.onedark i {
-  margin: 0 -3px;
+  margin: 0 -4px;
 }
 .wm__theme.onedark .circle--red {
   color: #E06C75;
@@ -335,6 +351,35 @@ h2 {
   color: #61AFEF;
 }
 
+.wm__theme.nord {
+  margin-top: auto;
+  display: flex;
+  font-family: "Roboto Mono", monospace;
+  align-self: flex-start;
+  padding: 4px 8px;
+  border-radius: 5px;
+  min-width: 165px;
+  user-select: none;
+  background-color: #2E3440;
+  color: #D8DEE9;
+}
+.wm__theme.nord .wm__theme__circles {
+  margin-right: 11px;
+  margin-left: 4px;
+}
+.wm__theme.nord i {
+  margin: 0 -4px;
+}
+.wm__theme.nord .circle--red {
+  color: #BF616A;
+}
+.wm__theme.nord .circle--green {
+  color: #A3BE8C;
+}
+.wm__theme.nord .circle--blue {
+  color: #81A1C1;
+}
+
 .wm__theme.tomorrow {
   margin-top: auto;
   display: flex;
@@ -342,16 +387,17 @@ h2 {
   align-self: flex-start;
   padding: 4px 8px;
   border-radius: 5px;
-  min-width: 200px;
+  min-width: 165px;
+  user-select: none;
   background-color: #1d1f21;
   color: #c5c8c6;
 }
 .wm__theme.tomorrow .wm__theme__circles {
-  margin-right: 10px;
-  margin-left: 3px;
+  margin-right: 11px;
+  margin-left: 4px;
 }
 .wm__theme.tomorrow i {
-  margin: 0 -3px;
+  margin: 0 -4px;
 }
 .wm__theme.tomorrow .circle--red {
   color: #cc6666;
@@ -363,49 +409,48 @@ h2 {
   color: #81a2be;
 }
 
-/*
-.wm__theme {
-  margin-top: auto;
-  display: flex;
-  font-family: 'Roboto Mono', monospace;
-  align-self: flex-start;
-  padding: 4px 8px;
-  border-radius: 5px;
-
-  $dracula-bg: #282A36;
-  $dracula-fg: #f8f8f2;
-  $dracula-red:   #ff5555;
-  $dracula-green: #50fa7b;
-  $dracula-blue:  #bd93f9;
-
-  color: $dracula-fg;
-  background-color: $dracula-bg;
-
-  .circle--red {
-    color: $dracula-red;
-  }
-
-  .circle--green {
-    color: $dracula-green;
-  }
-
-  .circle--blue {
-    color: $dracula-blue;
-  }
-
-  .wm__theme__circles {
-    margin-right: 8px;
-  }
-
-  i {
-    margin: 0 -3px;
-  }
-}
-*/
 .footer {
   background-color: #2E3440;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media all and (max-width: 600px) {
+  .hero {
+    padding: 65px 0;
+  }
+  .hero br {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 1.5em;
+  }
+  .hero p {
+    margin: 15px 0;
+  }
+  .hero .hero__buttons {
+    justify-content: flex-start;
+    margin: 25px 0;
+  }
+  .hero img {
+    display: none;
+  }
+
+  .wm .wm__entry {
+    margin: 25px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+  .wm .wm__entry .wm__theme {
+    margin: 8px 0;
+    align-self: center;
+  }
+
+  .wm__theme {
+    min-width: 50px !important;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
