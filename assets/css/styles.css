@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Mono:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Mono:wght@400&display=swap");
 /* Nord Theme */
 html {
   margin: 0;
@@ -9,6 +9,11 @@ body {
   background-color: #3B4252;
   color: #ECEFF4;
   margin: 0;
+}
+
+::selection {
+  background-color: #5E81AC;
+  color: #E5E9F0;
 }
 
 a {
@@ -42,6 +47,7 @@ h2 {
   font-weight: 700;
   font-size: 1.5em;
   letter-spacing: 0.1em;
+  user-select: none;
 }
 .header .header__logo img {
   max-height: 50px;
@@ -63,7 +69,7 @@ h2 {
 .header .header__nav a {
   text-decoration: none;
   color: #ECEFF4;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2em;
   margin: 0 6px;
   transition: all 0.2s ease-out;
@@ -91,20 +97,22 @@ h2 {
 .hero {
   width: 100%;
   font-size: 1.2em;
-  padding: 60px 0;
+  padding-top: 50px;
+  padding-bottom: 90px;
 }
 .hero .section__content {
   display: flex;
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
 }
 .hero .section__content h1 {
   margin: 5px 0;
 }
 .hero .section__content .hero__text {
   max-width: 600px;
+  flex: 1;
 }
 .hero .section__content .hero__buttons {
   display: flex;
@@ -113,9 +121,9 @@ h2 {
 .hero .section__content .hero__btn {
   font-size: 0.9em;
   border: 0;
-  border-radius: 4px;
-  padding: 8px 12px;
-  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 13px;
+  font-weight: 600;
   text-decoration: none;
   color: #2E3440;
   background-color: #88C0D0;
@@ -134,15 +142,18 @@ h2 {
   color: #3B4252;
   background-color: #D8DEE9;
 }
+.hero .section__content .hero__image {
+  align-self: center;
+}
 .hero .section__content .hero__image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   margin: 10px 0;
 }
 
 .features {
   background-color: #2E3440;
-  padding: 50px 0;
+  padding: 60px 0;
   align-items: center;
 }
 .features .section__content {
@@ -228,6 +239,7 @@ h2 {
 }
 .wm .wm__image img {
   width: 150px;
+  user-select: none;
 }
 .wm .wm__image .fa-power-off {
   font-size: 150px;
@@ -280,6 +292,9 @@ h2 {
   margin-right: 11px;
   margin-left: 4px;
 }
+.wm__theme.everforest .wm__theme__name {
+  user-select: text;
+}
 .wm__theme.everforest i {
   margin: 0 -4px;
 }
@@ -308,6 +323,9 @@ h2 {
 .wm__theme.dracula .wm__theme__circles {
   margin-right: 11px;
   margin-left: 4px;
+}
+.wm__theme.dracula .wm__theme__name {
+  user-select: text;
 }
 .wm__theme.dracula i {
   margin: 0 -4px;
@@ -338,6 +356,9 @@ h2 {
   margin-right: 11px;
   margin-left: 4px;
 }
+.wm__theme.onedark .wm__theme__name {
+  user-select: text;
+}
 .wm__theme.onedark i {
   margin: 0 -4px;
 }
@@ -366,6 +387,9 @@ h2 {
 .wm__theme.nord .wm__theme__circles {
   margin-right: 11px;
   margin-left: 4px;
+}
+.wm__theme.nord .wm__theme__name {
+  user-select: text;
 }
 .wm__theme.nord i {
   margin: 0 -4px;
@@ -396,6 +420,9 @@ h2 {
   margin-right: 11px;
   margin-left: 4px;
 }
+.wm__theme.tomorrow .wm__theme__name {
+  user-select: text;
+}
 .wm__theme.tomorrow i {
   margin: 0 -4px;
 }
@@ -411,8 +438,10 @@ h2 {
 
 .footer {
   background-color: #2E3440;
+  color: #D8DEE9;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 @media all and (max-width: 600px) {
@@ -446,6 +475,8 @@ h2 {
   .wm .wm__entry .wm__theme {
     margin: 8px 0;
     align-self: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .wm__theme {

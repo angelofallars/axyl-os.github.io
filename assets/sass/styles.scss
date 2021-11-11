@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Mono:wght@400&display=swap');
 
 /* Nord Theme */
 $polarnight-1:  #2E3440;
@@ -35,6 +35,11 @@ body {
   margin: 0;
 }
 
+::selection {
+  background-color: $frost-4;
+  color: $snowstorm-2;
+}
+
 a {
   color: $frost-2;
   text-decoration: none;
@@ -66,6 +71,7 @@ h2 {
     font-weight: 700;
     font-size: 1.5em;
     letter-spacing: 0.10em;
+    user-select: none;
 
     img {
       max-height: 50px;
@@ -91,7 +97,7 @@ h2 {
     a {
       text-decoration: none;
       color: $snowstorm-3;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 1.2em;
       margin: 0 6px;
       transition: all 0.2s ease-out;
@@ -124,14 +130,15 @@ h2 {
 .hero {
   width: 100%;
   font-size: 1.2em;
-  padding: 60px 0;
+  padding-top: 50px;
+  padding-bottom: 90px;
 
   .section__content {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
 
     h1 {
       margin: 5px 0;
@@ -139,6 +146,7 @@ h2 {
 
     .hero__text {
       max-width: 600px;
+      flex: 1;
     }
 
     .hero__buttons {
@@ -149,9 +157,9 @@ h2 {
     .hero__btn {
       font-size: 0.9em;
       border: 0;
-      border-radius: 4px;
-      padding: 8px 12px;
-      font-weight: 500;
+      border-radius: 6px;
+      padding: 8px 13px;
+      font-weight: 600;
       text-decoration: none;
       color: $polarnight-1;
       background-color: $frost-2;
@@ -174,9 +182,13 @@ h2 {
       background-color: $snowstorm-1;
     }
 
+    .hero__image {
+      align-self: center;
+    }
+
     .hero__image img {
       width: 100%;
-      max-width: 400px;
+      max-width: 450px;
       margin: 10px 0;
     }
   }
@@ -184,7 +196,7 @@ h2 {
 
 .features {
   background-color: $polarnight-1;
-  padding: 50px 0;
+  padding: 60px 0;
   align-items: center;
 
   .section__content {
@@ -290,6 +302,7 @@ h2 {
 
     img {
       width: $wm__image-width;
+      user-select: none;
     }
 
     .fa-power-off {
@@ -348,6 +361,10 @@ h2 {
   .wm__theme__circles {
     margin-right: 11px;
     margin-left: 4px;
+  }
+
+  .wm__theme__name {
+    user-select: text;
   }
 
   i {
@@ -412,8 +429,10 @@ h2 {
 
 .footer {
   background-color: $polarnight-1;
+  color: $snowstorm-1;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 @media all and (max-width: 600px) {
@@ -453,6 +472,7 @@ h2 {
       .wm__theme {
         margin: 8px 0;
         align-self: center;
+        padding-left: 10px; padding-right: 10px;
       }
     }
   }
