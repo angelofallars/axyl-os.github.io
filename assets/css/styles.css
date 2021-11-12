@@ -244,6 +244,7 @@ h2 {
   margin: 9px 0;
   font-size: 1.15em;
   color: #D8DEE9;
+  text-align: center;
 }
 .wm .wm__entry {
   display: flex;
