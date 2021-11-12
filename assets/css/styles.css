@@ -19,6 +19,11 @@ body {
 a {
   color: #88C0D0;
   text-decoration: none;
+  transition: all 0.15s ease-out;
+}
+
+a:hover {
+  color: #ECEFF4;
 }
 
 h2 {
@@ -60,25 +65,31 @@ h2 {
   width: 90%;
   max-width: 1120px;
 }
+.header .header__nav__btn {
+  display: none;
+}
 .header .header__nav {
   display: flex;
-}
-.header .header__nav .header__nav__btn {
-  display: none;
 }
 .header .header__nav a {
   text-decoration: none;
   color: #ECEFF4;
   font-weight: 600;
-  font-size: 1.2em;
-  margin: 0 6px;
-  transition: all 0.2s ease-out;
+  font-size: 1.3em;
+  margin: 0 9px;
+  transition: all 0.15s ease-out;
 }
 .header .header__nav a:hover {
   color: #88C0D0;
 }
 .header .header__nav a.header__nav--active {
   color: #88C0D0;
+}
+.header .header__nav__links {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
 }
 
 .section {
@@ -114,41 +125,48 @@ h2 {
   max-width: 600px;
   flex: 1;
 }
+.hero .section__content p {
+  font-size: 1.05em;
+}
 .hero .section__content .hero__buttons {
   display: flex;
   gap: 10px;
-}
-.hero .section__content .hero__btn {
-  font-size: 0.9em;
-  border: 0;
-  border-radius: 6px;
-  padding: 8px 13px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #2E3440;
-  background-color: #88C0D0;
-  transition: all 0.2s ease-out;
-}
-.hero .section__content .hero__btn--download:hover {
-  color: #3B4252;
-  background-color: #D8DEE9;
-}
-.hero .section__content .hero__btn--install {
-  color: #ECEFF4;
-  border: 2px solid #ECEFF4;
-  background-color: rgba(0, 0, 0, 0);
-}
-.hero .section__content .hero__btn--install:hover {
-  color: #3B4252;
-  background-color: #D8DEE9;
 }
 .hero .section__content .hero__image {
   align-self: center;
 }
 .hero .section__content .hero__image img {
   width: 100%;
-  max-width: 450px;
+  max-width: 425px;
   margin: 10px 0;
+}
+
+.btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2E3440;
+  background-color: #88C0D0;
+  user-select: none;
+  transition: all 0.2s ease-out;
+}
+
+.btn--download:hover {
+  color: #3B4252;
+  background-color: #D8DEE9;
+}
+
+.btn--install {
+  color: #ECEFF4;
+  border: 2px solid #ECEFF4;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.btn--install:hover {
+  color: #3B4252;
+  background-color: #D8DEE9;
 }
 
 .features {
@@ -166,7 +184,7 @@ h2 {
   text-align: center;
 }
 .features .features__header div {
-  color: #8FBCBB;
+  color: #D8DEE9;
   margin: 0 0;
   font-weight: 500;
 }
@@ -188,36 +206,9 @@ h2 {
 .features .feature h3 {
   margin: 12px 0;
 }
-.features .feature__body {
-  color: #E5E9F0;
-}
 .features .feature__icon .fab, .features .feature__icon .fas, .features .feature__icon .far {
   color: #88C0D0;
   font-size: 80px;
-}
-
-.big-preview {
-  padding: 30px 0;
-}
-.big-preview .section__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.big-preview h2 {
-  margin: 20px 0;
-}
-.big-preview img {
-  width: 100%;
-  max-width: 750px;
-}
-.big-preview p {
-  text-align: left;
-  align-self: center;
-  width: 100%;
-  max-width: 750px;
-  margin: 5px 0;
-  font-weight: 500;
 }
 
 .wm {
@@ -251,8 +242,8 @@ h2 {
 }
 .wm h3 {
   margin: 9px 0;
-  font-size: 1.6em;
-  color: #88C0D0;
+  font-size: 1.15em;
+  color: #D8DEE9;
 }
 .wm .wm__entry {
   display: flex;
@@ -436,15 +427,133 @@ h2 {
   color: #81a2be;
 }
 
+.testimonial {
+  padding: 0;
+  margin: 10px 0;
+}
+.testimonial .section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  max-width: 500px;
+  margin: 15px 0;
+  padding: 24px 30px;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+  background-color: #434C5E;
+  color: #D8DEE9;
+}
+.testimonial h2 {
+  margin: 10px 0;
+}
+.testimonial .testimonial__quote {
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+.testimonial .testimonial__author {
+  font-size: 1.4em;
+  align-self: flex-end;
+}
+
+.call-to-action {
+  text-align: center;
+}
+.call-to-action .section__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 85%;
+  max-width: 550px;
+  margin: 50px 0;
+}
+.call-to-action .call-to-action__title {
+  font-size: 1.9em;
+}
+.call-to-action .call-to-action__title h3 {
+  margin: 8px 0;
+}
+.call-to-action .call-to-action__body {
+  font-size: 1.4em;
+}
+.call-to-action .call-to-action__button {
+  font-size: 1.1em;
+}
+.call-to-action .btn--download {
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
 .footer {
   background-color: #2E3440;
   color: #D8DEE9;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-align: center;
+}
+.footer .section__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.footer .footer__logo img {
+  max-height: 45px;
+}
+.footer .footer__copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media all and (max-width: 600px) {
+  .header .header__logo {
+    font-size: 1.8em;
+  }
+  .header .header__nav {
+    flex-direction: column;
+    align-items: flex-end;
+    right: 20px;
+    top: 20px;
+  }
+  .header .header__nav .header__nav__btn {
+    display: block;
+    font-size: 2em;
+    transition: all 0.2s ease-out;
+  }
+  .header .header__nav .header__nav__btn.responsive {
+    color: #88C0D0;
+    transform: rotate(-90deg);
+  }
+  .header .header__nav .header__nav__links {
+    display: none;
+    opacity: 0;
+    text-align: right;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 45px;
+    font-size: 1.15em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    background-color: #2E3440;
+    border-radius: 6px;
+    padding: 10px 0;
+    padding-left: 25px;
+    padding-right: 2px;
+    transition: all 0.2s ease-out;
+  }
+  .header .header__nav .header__nav__links.responsive {
+    display: flex;
+    opacity: 1;
+    margin-top: 15px;
+  }
+  .header .header__nav li {
+    margin: 3px 0;
+  }
+
   .hero {
     padding: 65px 0;
   }
@@ -465,6 +574,13 @@ h2 {
     display: none;
   }
 
+  .feature {
+    margin: 8px 0;
+  }
+
+  .wm .wm__header br {
+    display: none;
+  }
   .wm .wm__entry {
     margin: 25px 0;
     flex-direction: column;
